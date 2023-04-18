@@ -6,7 +6,7 @@
 
 # Upscale image (Real-ESRGAN)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/Real-ESRGAN.png" height="200" alt="Real-ESRGAN">
-<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/Real-ESRGAN_photo.ipynb">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/Real_ESRGAN_photo.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
