@@ -12,7 +12,7 @@
 
 # Enhance image (Swin2SR)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/swin2sr.jpg" height="200" alt="Swin2SR">
-<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/swin2sr.ipynbb">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/swin2sr.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
