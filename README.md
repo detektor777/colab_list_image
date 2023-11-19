@@ -16,3 +16,10 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+
+# Text to image (Sdxl_1_0)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/sdlx_1_0.jpg" height="200" alt="Sdxl">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/sdxl_1_0.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
