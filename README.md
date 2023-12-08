@@ -26,6 +26,6 @@
 </a>
 
 <div>lora</div>
-<a href="https://github.com/detektor777/colab_list_image/blob/main/sdxl_1_0_lora.ipynb">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/sdxl_1_0_lora.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
