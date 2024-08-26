@@ -10,6 +10,12 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+# Deblur image (NAFNet)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/NAFNet.jpg" height="200" alt="NAFNet">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/NAFNet.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
 # Enhance image (Swin2SR)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/swin2sr.jpg" height="200" alt="Swin2SR">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/swin2sr.ipynb">
