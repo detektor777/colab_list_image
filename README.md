@@ -22,6 +22,13 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+# Text to image (Sdxl_0_9)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/sdlx_1_0.jpg" height="200" alt="Sdxl">
+
+<div>no lora</div>
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/sdxl_0_9.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
 
 # Text to image (Sdxl_1_0)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/sdlx_1_0.jpg" height="200" alt="Sdxl">
@@ -33,5 +40,13 @@
 
 <div>lora</div>
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/sdxl_1_0_lora.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
+# Text to image (flux_1_dev)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/sdlx_1_0.jpg" height="200" alt="Sdxl">
+
+<div>no lora</div>
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/flux_1_dev.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
