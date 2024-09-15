@@ -23,7 +23,7 @@
 </a>
 
 # Text to image (Sdxl_0_9)
-<img src="https://github.com/detektor777/colab_list_image/blob/main/image/sdlx_1_0.jpg" height="200" alt="Sdxl">
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/sdlx_0_9.jpg" height="200" alt="Sdxl">
 
 <div>no lora</div>
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/sdxl_0_9.ipynb">
@@ -44,7 +44,7 @@
 </a>
 
 # Text to image (flux_1_dev)
-<img src="https://github.com/detektor777/colab_list_image/blob/main/image/sdlx_1_0.jpg" height="200" alt="Sdxl">
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/flux_1_dev.jpg" height="200" alt="Sdxl">
 
 <div>no lora</div>
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/flux_1_dev.ipynb">
