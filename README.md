@@ -50,3 +50,10 @@
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/flux_1_dev.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
+
+# Slideshow
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/slideshow.jpg" height="200" alt="Sdxl">
+
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/slideshow.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
