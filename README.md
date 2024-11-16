@@ -52,10 +52,17 @@
 </a>
 
 # Text to image (flux_1_dev)
-<img src="https://github.com/detektor777/colab_list_image/blob/main/image/flux_1_dev.jpg" height="200" alt="Sdxl">
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/flux_1_dev.jpg" height="200" alt="flux">
 
 <div>no lora</div>
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/flux_1_dev.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
+# Image to image (flux_1_dev)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/flux_image_to_image.jpg" height="200" alt="flux_image_to_image">
+
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/flux_image_to_image.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
