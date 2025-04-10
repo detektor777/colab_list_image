@@ -34,6 +34,12 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+# Restore White Balance
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/restore_white_balance.jpg" height="200" alt="restore_white_balance">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/restore_white_balance.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
 # Sharpness
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/sharpness.jpg" height="200" alt="sharpness">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/sharpness.ipynb">
