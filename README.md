@@ -14,13 +14,17 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
-
 # Upscale image (DRCT)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/DRCT.jpg" height="200" alt="DRCT">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/DRCT.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+# Upscale image (SRFormer)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/sr_former.jpg" height="400" alt="sr_former">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/sr_former.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
 
 # Deblur image (NAFNet)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/NAFNet.jpg" height="200" alt="NAFNet">
