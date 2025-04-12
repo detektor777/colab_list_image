@@ -15,7 +15,7 @@
 </a>
 
 # Upscale image (DRCT)
-<img src="https://github.com/detektor777/colab_list_image/blob/main/image/DRCT.jpg" height="200" alt="DRCT">
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/DRCT.jpg" height="400" alt="DRCT">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/DRCT.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
