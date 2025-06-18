@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Services Table</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F3F3F3;
+            color: #333;
+            padding: 20px;
+        }
+        .filter {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .filter label {
+            font-size: 14px;
+            color: #333;
+        }
+        .filter select, .filter input {
+            padding: 8px;
+            border: 1px solid #0078D7;
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s;
+        }
+        .filter select:focus, .filter input:focus {
+            outline: none;
+            border-color: #005A9E;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        th {
+            background-color: #0078D7;
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #F5F5F5;
+        }
+        td a {
+            color: #0078D7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        td a:hover {
+            color: #005A9E;
+        }
+        .credit-periodically {
+            background-color: #28A745;
+            color: #FFFFFF;
+            border-radius: 4px;
+            padding: 8px;
+            text-align: center;
+        }
+        .credit-once {
+            background-color: #F28C38;
+            color: #FFFFFF;
+            border-radius: 4px;
+            padding: 8px;
+            text-align: center;
+        }
+        .credit-none {
+            background-color: #6C757D;
+            color: #FFFFFF;
+            border-radius: 4px;
+            padding: 8px;
+            text-align: center;
+        }
+        .accordion {
+            background-color: #E0E0E0;
+            color: #333;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .accordion:hover, .accordion.active {
+            background-color: #0078D7;
+            color: #FFFFFF;
+        }
+        .panel {
+            padding: 0 12px;
+            display: none;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+        .panel h4 {
+            margin: 16px 0 8px;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+        }
+        .panel ul {
+            margin: 0 0 12px 20px;
+            padding-left: 10px;
+        }
+        .panel li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            .filter {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            th, td {
+                font-size: 12px;
+                padding: 8px;
+            }
+            .panel h4 {
+                font-size: 14px;
+            }
+            .panel li {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="filter">
+    <label for="creditFilter">Filter by Credits:</label>
+    <select id="creditFilter">
+        <option value="">All</option>
+        <option value="no">None</option>
+        <option value="once">Once after registration</option>
+        <option value="periodically">Periodically</option>
+    </select>
+    <label for="serviceFilter">Filter by Service:</label>
+    <input type="text" id="serviceFilter" list="servicesList" placeholder="Enter service name">
+    <datalist id="servicesList"></datalist>
+</div>
+
+<table id="serviceTable">
+    <thead>
+        <tr>
+            <th>Service</th>
+            <th>Free Credits</th>
+            <th>Services</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- pollo.ai -->
+        <tr>
+            <td><a href="https://pollo.ai/invitation-landing?invite_code=FIO2i7">pollo</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Kling AI</li>
+                        <li>Runway</li>
+                        <li>Hailuo AI</li>
+                        <li>Vidu AI</li>
+                        <li>Luma AI</li>
+                        <li>Pika AI</li>
+                        <li>PixVerse AI</li>
+                        <li>Seaweed</li>
+                        <li>Wanx AI</li>
+                        <li>Hunyuan</li>
+                        <li>Google Veo 3</li>
+                    </ul>
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Recraft</li>
+                        <li>Ideogram</li>
+                        <li>Stable Diffusion</li>
+                        <li>Flux Schnell</li>
+                        <li>Flux Dev</li>
+                        <li>Flux Dev Lora</li>
+                        <li>Flux 1.1 Pro</li>
+                        <li>Flux 1.1 Pro Ultra</li>
+                        <li>DALL-E</li>
+                        <li>Imagen</li>
+                        <li>GPT-4o</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Background Removal</li>
+                        <li>Object Removal</li>
+                        <li>Image Enhancement</li>
+                        <li>Ghibli Style Generation</li>
+                        <li>Anime Upscaling</li>
+                        <li>API Services</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- imagine.art -->
+        <tr>
+            <td><a href="https://www.imagine.art/invite/e7b71b8f">imagine</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Kling v1</li>
+                        <li>Kling 1.5 Pro</li>
+                        <li>Kling 1.6 Pro</li>
+                        <li>Kling 1.6 Standard</li>
+                        <li>LTX Video v0.95</li>
+                    </ul>
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>AI Art Generation</li>
+                        <li>Text-to-Image</li>
+                        <li>Image Remixing</li>
+                        <li>Inpainting</li>
+                        <li>Image Expanding</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Background Replacement</li>
+                        <li>AI Headshots</li>
+                        <li>AI Filter</li>
+                        <li>Real-Time Generation</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- hailuoai.video -->
+        <tr>
+            <td><a href="https://hailuoai.video/">Hailuo AI</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                        <li>T2V-01-Director</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Subject Reference</li>
+                        <li>Prompt Optimization</li>
+                        <li>Lip Sync</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- app.pixverse.ai -->
+        <tr>
+            <td><a href="https://app.pixverse.ai/">PixVerse AI</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                        <li>Video Extension</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Key Frame Control</li>
+                        <li>Trending AI Effects</li>
+                        <li>Built-In Upscaler</li>
+                        <li>Character-Driven Videos</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- freepik.com -->
+        <tr>
+            <td><a href="https://www.freepik.com/">Freepik</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️🔊⚙️</button>
+                <div class="panel">
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                        <li>Reimagine Tool</li>
+                    </ul>
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                    </ul>
+                    <h4>Audio Generation</h4>
+                    <ul>
+                        <li>AI Voice Generator</li>
+                        <li>Sound Effect Generation</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Image Editing</li>
+                        <li>Background Removal</li>
+                        <li>Video Editing</li>
+                        <li>Upscaling</li>
+                        <li>Lip Sync</li>
+                        <li>Consistent Character Design</li>
+                    </ul>
+                    <h4>Stock Assets</h4>
+                    <ul>
+                        <li>Photos</li>
+                        <li>Vectors</li>
+                        <li>Illustrations</li>
+                        <li>PSD Files</li>
+                        <li>Icons</li>
+                        <li>Templates</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- recraft.ai -->
+        <tr>
+            <td><a href="https://www.recraft.ai/invite/kIJl7xjgdn">Recraft AI</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🖼️⚙️</button>
+                <div class="panel">
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                        <li>Vector Image Generation</li>
+                        <li>Seamless Pattern Creation</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Background Removal</li>
+                        <li>Image Upscaling</li>
+                        <li>Inpainting</li>
+                        <li>Outpainting</li>
+                        <li>Style Customization</li>
+                        <li>Mockup Generation</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- udio.com -->
+        <tr>
+            <td><a href="https://www.udio.com/">Udio</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🔊⚙️</button>
+                <div class="panel">
+                    <h4>Music Generation</h4>
+                    <ul>
+                        <li>Text-to-Music</li>
+                        <li>Custom Lyrics Support</li>
+                        <li>Instrumental Tracks</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Audio Upload</li>
+                        <li>Song Extension</li>
+                        <li>Genre Customization</li>
+                        <li>Stem Separation</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- suno.com -->
+        <tr>
+            <td><a href="https://suno.com/invite/@keyedupradios122">Suno</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🔊⚙️</button>
+                <div class="panel">
+                    <h4>Music Generation</h4>
+                    <ul>
+                        <li>Text-to-Music</li>
+                        <li>Custom Lyrics Support</li>
+                        <li>Instrumental Tracks</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Audio Upload</li>
+                        <li>Song Extension</li>
+                        <li>Genre Customization</li>
+                        <li>Album Art Generation</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- app.klingai.com/global -->
+        <tr>
+            <td><a href="https://app.klingai.com/global">Kling AI</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                        <li>AI Effects</li>
+                    </ul>
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                        <li>Kolors Large Model</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Prompt Optimization</li>
+                        <li>Resolution Customization</li>
+                        <li>Video Length Adjustment</li>
+                        <li>Motion Range Control</li>
+                        <li>Background Editing</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- portal.speechmatics.com/jobs/create -->
+        <tr>
+            <td><a href="https://portal.speechmatics.com/jobs/create">Speechmatics</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🔊⚙️</button>
+                <div class="panel">
+                    <h4>Audio Transcription</h4>
+                    <ul>
+                        <li>Real-Time Transcription</li>
+                        <li>Batch Transcription</li>
+                        <li>Multilingual Support</li>
+                        <li>Speaker Diarization</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Custom Vocabulary</li>
+                        <li>Auto Chapters</li>
+                        <li>Profanity Filtering</li>
+                        <li>Sentiment Analysis</li>
+                        <li>Automatic Translation</li>
+                        <li>Audio Pre-processing</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- sora.chatgpt.com -->
+        <tr>
+            <td><a href="https://sora.chatgpt.com">Sora</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                        <li>Video Extension</li>
+                    </ul>
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Storyboard Editor</li>
+                        <li>Remix Tool</li>
+                        <li>Blend Tool</li>
+                        <li>Loop Tool</li>
+                        <li>Aspect Ratio Customization</li>
+                        <li>C2PA Metadata Tagging</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- chatgpt.com -->
+        <tr>
+            <td><a href="https://chatgpt.com">ChatGPT</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🖼️✍️⚙️</button>
+                <div class="panel">
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                        <li>Image Editing</li>
+                    </ul>
+                    <h4>Text Generation</h4>
+                    <ul>
+                        <li>Conversational AI</li>
+                        <li>Code Generation</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Web Search</li>
+                        <li>Data Analysis</li>
+                        <li>Custom Instructions</li>
+                        <li>Advanced Voice Mode</li>
+                        <li>Canvas Editing</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- deevid.ai/lip-sync-ai -->
+        <tr>
+            <td><a href="https://deevid.ai/">Deevid AI</a></td>
+            <td data-credit="once" class="credit-once">Once after registration</td>
+            <td>
+                <button class="accordion">Services 🎥⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                        <li>Lip Sync AI</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Multilingual Support</li>
+                        <li>Prompt Optimization</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- aistudio.google.com/gen-media -->
+        <tr>
+            <td><a href="https://aistudio.google.com/gen-media">Google AI Studio</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️🔊</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                    </ul>
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                    </ul>
+                    <h4>Audio Generation</h4>
+                    <ul>
+                        <li>Text-to-Speech</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- vmake.ai/ai-video-generator/create -->
+        <tr>
+            <td><a href="https://vmake.ai/workspace">Vmake AI</a></td>
+            <td data-credit="once" class="credit-once">Once after registration</td>
+            <td>
+                <button class="accordion">Services 🎥</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Seedance (Detailed video and smooth motion - Short generation time)</li>
+                        <li>MiracleVision 6 (Animations perform better - Short generation time)</li>
+                        <li>Wan 2.1 (Good video quality and aesthetics - Long generation time)</li>
+                        <li>KLING 2.0 Pro (Cutting-edge high-quality models - Long generation time)</li>
+                        <li>KLING 1.6 Pro (Stellar performance in real-world scenarios - Long generation time)</li>
+                        <li>VIDU 1.5 Pro (More pronounced motion - Long generation time)</li>
+                        <li>MiracleVision 5 (High performance - Short generation time)</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- www.seedance.tv -->
+        <tr>
+            <td><a href="https://www.seedance.tv/i/e9xSfj">Seedance</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Seedance 1.0 Pro (Revolutionary multi-shot storytelling with cinematic 1080p quality)</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- veo3api.ai/playground -->
+        <tr>
+            <td><a href="https://veo3api.ai/playground">Veo3API</a></td>
+            <td data-credit="once" class="credit-once">Once after registration</td>
+            <td>
+                <button class="accordion">Services 🎥</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Veo 3 (4K video generation with synchronized audio)</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- ai.vadoo.tv -->
+        <tr>
+            <td><a href="https://vadoo.tv/?via=nikolai">Vadoo AI</a></td>
+            <td data-credit="no" class="credit-none">None</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️🔊</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Standard Text-to-Video (Fast, high-quality for complex scenes)</li>
+                        <li>Advanced Text-to-Video (Higher quality with advanced processing)</li>
+                        <li>Balanced Text-to-Video (Balanced text-to-video model)</li>
+                        <li>Haiper 2.5 (Hyper-realistic videos)</li>
+                        <li>SkyReels V1 (First open-source human-centric model)</li>
+                        <li>Google Veo 3 (Google's most powerful AI video model)</li>
+                        <li>Google Veo 2 (Google's powerful AI video model)</li>
+                        <li>Luma Best (Great for anime, dynamic and realistic video)</li>
+                        <li>Wan 2.1 (High visual quality and motion diversity)</li>
+                        <li>Pika v2 Turbo (Creates videos from images with high quality)</li>
+                        <li>Video Face Swap</li>
+                        <li>AI Lip Sync</li>
+                    </ul>
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>AI Image Upscaler</li>
+                        <li>Image Face Swap</li>
+                        <li>AI Dress Change</li>
+                        <li>AI Background Remover</li>
+                        <li>AI Product Shot</li>
+                        <li>AI Filter</li>
+                        <li>AI Skin Enhancer</li>
+                        <li>April Fools Prank</li>
+                        <li>Product Photography</li>
+                        <li>AI Hair Style Changer</li>
+                        <li>AI Dress Color Change</li>
+                        <li>AI Color Photo</li>
+                        <li>AI Image Extender</li>
+                        <li>AI Ghibli Style</li>
+                        <li>Anime Art Generator</li>
+                        <li>AI Object Eraser</li>
+                        <li>AI Change Pose</li>
+                        <li>AI Celebrity Image</li>
+                    </ul>
+                    <h4>Audio Generation</h4>
+                    <ul>
+                        <li>AI Voiceover</li>
+                        <li>AI Sound Effect</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- www.krea.ai -->
+        <tr>
+            <td><a href="https://www.krea.ai/">Krea.ai</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️⚙️</button>
+                <div class="panel">
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                        <li>Image Enhancement</li>
+                        <li>Pattern Generation</li>
+                    </ul>
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Real-Time Generation</li>
+                        <li>Style Customization</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- www.higgsfield.ai -->
+        <tr>
+            <td><a href="https://higgsfield.ai/">Higgsfield.ai</a></td>
+            <td data-credit="once" class="credit-once">Once after registration</td>
+            <td>
+                <button class="accordion">Services 🎥✍️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                        <li>Cinematic Motion Controls</li>
+                    </ul>
+                    <h4>Text Generation</h4>
+                    <ul>
+                        <li>AI-Powered Text Creation</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- app.topazlabs.com/video/upscale -->
+        <tr>
+            <td><a href="https://app.topazlabs.com/video/upscale">Topaz Labs Video Upscale</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥⚙️</button>
+                <div class="panel">
+                    <h4>Video Upscaling</h4>
+                    <ul>
+                        <li>Upscale to 4K</li>
+                        <li>Upscale to 8K</li>
+                        <li>Upscale to 16K</li>
+                        <li>Artemis High Quality</li>
+                        <li>Proteus Fine Tune</li>
+                        <li>Themis Stabilization</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Noise Reduction</li>
+                        <li>Compression Artifact Removal</li>
+                        <li>Frame Rate Enhancement</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- app.heygen.com/home -->
+        <tr>
+            <td><a href="https://app.heygen.com/home">HeyGen Video Avatar</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Video Avatar Generation</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>70+ Languages Support</li>
+                        <li>175+ Dialects Support</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- pika.art -->
+        <tr>
+            <td><a href="https://pika.art">Pika.art</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥⚙️</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Text-to-Video</li>
+                        <li>Image-to-Video</li>
+                        <li>Video-to-Video</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Pikaframes (Keyframe Transitions)</li>
+                        <li>Pikaswaps (Object Modification)</li>
+                        <li>Pikaffects (Effects like Inflate, Melt, Explode)</li>
+                        <li>Pikamemes (Personalized Memes)</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- app.runwayml.com -->
+        <tr>
+            <td><a href="https://app.runwayml.com/">RunwayML</a></td>
+            <td data-credit="once" class="credit-once">Once after registration</td>
+            <td>
+                <button class="accordion">Services 🎥</button>
+                <div class="panel">
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Gen-3 Text-to-Video</li>
+                        <li>Gen-4 Image-to-Video</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- elevenlabs.io -->
+        <tr>
+            <td><a href="https://elevenlabs.io/">ElevenLabs</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🔊⚙️</button>
+                <div class="panel">
+                    <h4>Speech Generation</h4>
+                    <ul>
+                        <li>Text-to-Speech (70+ languages)</li>
+                        <li>Voice Cloning</li>
+                        <li>Conversational AI</li>
+                    </ul>
+                    <h4>Speech Dubbing</h4>
+                    <ul>
+                        <li>Automated Dubbing (29+ languages)</li>
+                        <li>Dubbing Studio</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Voice Isolator</li>
+                        <li>Speech-to-Text</li>
+                        <li>Voice Changer</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <!-- firefly.adobe.com -->
+        <tr>
+            <td><a href="https://firefly.adobe.com/">Adobe Firefly</a></td>
+            <td data-credit="periodically" class="credit-periodically">Periodically</td>
+            <td>
+                <button class="accordion">Services 🎥🖼️⚙️</button>
+                <div class="panel">
+                    <h4>Image Generation</h4>
+                    <ul>
+                        <li>Text-to-Image</li>
+                        <li>Generative Fill</li>
+                        <li>Generative Expand</li>
+                    </ul>
+                    <h4>Video Generation</h4>
+                    <ul>
+                        <li>Generate Video</li>
+                        <li>Translate and Lip Sync</li>
+                    </ul>
+                    <h4>Other Tools</h4>
+                    <ul>
+                        <li>Vector Graphics</li>
+                        <li>Audio Generation</li>
+                        <li>3D Generation</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    // Accordion functionality
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    // Populate datalist with unique services and categories
+    var datalist = document.getElementById("servicesList");
+    var servicesSet = new Set();
+    var lis = document.querySelectorAll("#serviceTable .panel li");
+    var categories = document.querySelectorAll("#serviceTable .panel h4");
+    lis.forEach(function(li) {
+        servicesSet.add(li.textContent.trim());
+    });
+    categories.forEach(function(h4) {
+        servicesSet.add(h4.textContent.trim());
+    });
+    var servicesArray = Array.from(servicesSet).sort();
+    servicesArray.forEach(function(service) {
+        var option = document.createElement("option");
+        option.value = service;
+        datalist.appendChild(option);
+    });
+
+    // Filter functionality
+    document.getElementById("creditFilter").addEventListener("change", filterTable);
+    document.getElementById("serviceFilter").addEventListener("input", filterTable);
+
+    function filterTable() {
+        var creditFilter = document.getElementById("creditFilter").value;
+        var serviceFilter = document.getElementById("serviceFilter").value.toLowerCase();
+        var table = document.getElementById("serviceTable");
+        var tr = table.getElementsByTagName("tr");
+
+        for (var i = 1; i < tr.length; i++) {
+            var tdCredit = tr[i].getElementsByTagName("td")[1];
+            var servicesInRow = Array.from(tr[i].querySelectorAll(".panel li, .panel h4")).map(function(el) {
+                return el.textContent.trim().toLowerCase();
+            });
+            var creditMatch = creditFilter === "" || tdCredit.getAttribute("data-credit") === creditFilter;
+            var serviceMatch = serviceFilter === "" || servicesInRow.some(function(service) {
+                return service.includes(serviceFilter);
+            });
+            if (creditMatch && serviceMatch) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
