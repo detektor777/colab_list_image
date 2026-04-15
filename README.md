@@ -99,6 +99,13 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+# Nanobanana watermark remover
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/Nanobanana_Watermark_Remover.jpg" height="200" alt="Sdxl">
+
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/Nanobanana_Watermark_Remover.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
 
 # List of free ai services
 <a href="https://detektor777.github.io/colab_list_image/">
