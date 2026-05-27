@@ -8,6 +8,13 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+# Online Photo Restoration Service
+<div>No code needed - use this web-based AI service for quick photo restoration:</div>
+<a href="https://photorestore.ai">
+  <img src="https://img.shields.io/badge/PhotoRestore.ai-AI%20Photo%20Restoration-blue" alt="PhotoRestore.ai">
+</a>
+<div>Repairs scratches, fading, tears, and colorizes B&W photos automatically.</div>
+
 # Upscale image (Real-ESRGAN)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/Real_ESRGAN_photo.jpg" height="300" alt="Real-ESRGAN">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/Real_ESRGAN_photo.ipynb">
