@@ -38,6 +38,12 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
+# Upscale image (Osediff)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/osediff.jpg" height="300" alt="sr_former">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/osediff_super_resolution.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
 # Deblur image (NAFNet)
 <img src="https://github.com/detektor777/colab_list_image/blob/main/image/NAFNet.jpg" height="200" alt="NAFNet">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/NAFNet.ipynb">
