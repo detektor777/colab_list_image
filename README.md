@@ -27,20 +27,26 @@
 </a>
 
 # Upscale image (Tile upscaler v2)
-<img src="https://github.com/detektor777/colab_list_image/blob/main/image/tile_upscaler_v2.jpg" height="300" alt="sr_former">
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/tile_upscaler_v2.jpg" height="300" alt="tile_upscaler_v2">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/tile_upscaler_v2.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
 # Upscale image (Supir)
-<img src="https://github.com/detektor777/colab_list_image/blob/main/image/supir.jpg" height="300" alt="sr_former">
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/supir.jpg" height="300" alt="supir">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/supir.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
 # Upscale image (Osediff)
-<img src="https://github.com/detektor777/colab_list_image/blob/main/image/osediff.jpg" height="300" alt="sr_former">
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/osediff.jpg" height="300" alt="osediff">
 <a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/osediff_super_resolution.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
+</a>
+
+# Upscale image (Odtsr qwen)
+<img src="https://github.com/detektor777/colab_list_image/blob/main/image/odtsr_qwen.jpg" height="300" alt="odtsr_qwen">
+<a href="https://colab.research.google.com/github/detektor777/colab_list_image/blob/main/odtsr_qwen.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo">
 </a>
 
